@@ -25,3 +25,16 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 });
+
+export class home {
+  constructor(public navCtrl: NavController) {
+  }
+
+  InicioSesion() {
+    this.navCtrl.push("InicioSesion");
+  }
+
+  Registro(){
+    this.navCtrl.push("Registro");
+  }
+}

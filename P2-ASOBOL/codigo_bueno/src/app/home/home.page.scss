@@ -1,12 +1,30 @@
+//.letras{
+    //display:inline-block;
+    //text-align: center;
+    //vertical-align: middle;
+    //float: inherit;
+//}
 .titulo{
-    //display: inline-block;
+    text-align: center;
+    margin-right: 10%;
+    margin-top: -2%;
 }
 
+.img{
+    float:left;
+}
+
+.BotonesInicio{
+    margin-top: 45%;
+}
 
 ion-button{
     --color: black;
     font-weight: bold;
     --background: #FF9D40;
     vertical-align: middle;
+    margin-bottom: 7%;
+    //border: 1.5px solid;    
+    //border-radius: 10px;
 }
 
