@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController} from '../../../node_modules/ionic-angular/navigation/nav-controller';
 import {InicioSesionPage} from '../inicio-sesion/inicio-sesion.page';
 import {RegistroPage} from '../registro/registro.page';
 @Component({
