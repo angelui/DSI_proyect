@@ -5,19 +5,38 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+    <ion-navbar>
+      <ion-title>Ajustes</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <div class = "AjustesGrande">
-
+  
+  <div class = "ajustesGrande">
+    <ion-label>AJUSTES PERSONALES</ion-label>
+    <div class="camposAjustes" (click)="MostrarEditarPerfil()">Editar perfil</div>
+    <div class="camposAjustes" (click)="MostrarTipoUnidad()">Tipo de unidad</div>
+    <div class="camposAjustes" (click)="MostrarPrivacidad()">Privacidad</div>
+    <div class="camposAjustes" (click)="MostrarNotificaciones()">Notificaciones</div>
   </div>
 
-  <div class = "AjustesGrande">
-
+  <div class = "ajustesGrande">
+    <ion-label>AJUSTES DE LA APP</ion-label>
+    <div class="camposAjustes" (click)="MostrarTema()">Tema</div>
+    <div class="camposAjustes" (click)="MostrarIdioma()">Idioma</div>
   </div>
 
-  <div class = "AjustesGrande">
-
+  <div class = "ajustesGrande">
+    <ion-label>MÁS</ion-label>
+    <div class="camposAjustes" (click)="MostrarExportarDatos()">Exportar datos</div>
+    <div class="camposAjustes" (click)="MostrarMonedasNivel()">Monedas y nivel</div>
+    <div class="camposAjustes" (click)="MostrarTerminosCondiciones()">Términos y condiciones</div>
+    <div class="camposAjustes" (click)="MostrarCompartir()">Compartir</div>
+    <div class="camposAjustes" (click)="MostrarConocenos()">Conócenos</div>
   </div>
+
+  <button class = "boton" ion-button (click)="CerrarSesion()">Cerrar Sesión</button>
+
+
 
 </ion-content>
