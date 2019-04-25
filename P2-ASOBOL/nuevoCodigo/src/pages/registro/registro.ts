@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -15,11 +16,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistroPage {
 
+  /*checkboxs = [
+    {
+      name: 'Paciente',
+      selected: true
+    },
+    {
+      name: 'Doctor',
+      selected: false
+    },
+  ];*/
+
+  paciente = true;
+  doctor = false;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
+  }
+
+  actualizarPaciente(){
+
+  }
+
+  actualizarDoctor(){
   }
 
 }

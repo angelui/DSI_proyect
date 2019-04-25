@@ -5,16 +5,44 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+
+
+import { AjustesPage } from '../pages/ajustes/ajustes';
+import { CerrarSesionPage } from '../pages/cerrar-sesion/cerrar-sesion';
+import { CompartirPage } from '../pages/compartir/compartir';
+import { ConocenosPage } from '../pages/conocenos/conocenos';
+import { EditarPerfilPage } from '../pages/editar-perfil/editar-perfil';
+import { ExportarDatosPage } from '../pages/exportar-datos/exportar-datos';
 import { HomePage } from '../pages/home/home';
+import { IdiomaPage } from '../pages/idioma/idioma';
 import { InicioSesionPage } from '../pages/inicio-sesion/inicio-sesion';
+import { MonedasNivelPage } from '../pages/monedas-nivel/monedas-nivel';
+import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
+import { PrivacidadPage } from '../pages/privacidad/privacidad';
 import { RegistroPage } from '../pages/registro/registro';
+import { TemaPage } from '../pages/tema/tema';
+import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
+import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
 
 @NgModule({
   declarations: [
     MyApp,
+    AjustesPage,
+    CerrarSesionPage,
+    CompartirPage,
+    ConocenosPage,
+    EditarPerfilPage,
+    ExportarDatosPage,
     HomePage,
+    IdiomaPage,
     InicioSesionPage,
-    RegistroPage
+    MonedasNivelPage,
+    NotificacionesPage,
+    PrivacidadPage,
+    RegistroPage,
+    TemaPage,
+    TerminosCondicionesPage,
+    TipoUnidadPage
   ],
   imports: [
     BrowserModule,
@@ -23,9 +51,22 @@ import { RegistroPage } from '../pages/registro/registro';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    AjustesPage,
+    CerrarSesionPage,
+    CompartirPage,
+    ConocenosPage,
+    EditarPerfilPage,
+    ExportarDatosPage,
     HomePage,
+    IdiomaPage,
     InicioSesionPage,
-    RegistroPage
+    MonedasNivelPage,
+    NotificacionesPage,
+    PrivacidadPage,
+    RegistroPage,
+    TemaPage,
+    TerminosCondicionesPage,
+    TipoUnidadPage
   ],
   providers: [
     StatusBar,

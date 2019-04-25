@@ -12,17 +12,18 @@
 
 <ion-content padding>
   <form class="formulario_registro">
-
-    <ion-list>
-      <ion-item>
-        <ion-label>Paciente</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-label>Doctor</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
-    </ion-list>
+    <!--<ion-item *ngFor="let checkbox of checkboxs">
+        <ion-label>{{ checkbox.name }}</ion-label>
+        <ion-checkbox [(ngModel)]="checkbox.selected" [name]="checkbox.name"></ion-checkbox>
+    </ion-item>-->
+    <ion-item>
+      <ion-label>Paciente</ion-label>
+      <ion-checkbox checked="true" [(ngModel)]="paciente" name="paciente"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Doctor</ion-label>
+      <ion-checkbox [(ngModel)]="doctor" name="doctor"></ion-checkbox>
+    </ion-item>
     <ion-item>
       <ion-label>Nombre*</ion-label>
       <ion-input type="text" placeholder="Nombre" name="nombre" required></ion-input>
