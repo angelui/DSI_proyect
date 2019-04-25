@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InicioSesionPage } from '../inicio-sesion/inicio-sesion';
 import { RegistroPage } from '../registro/registro';
+import { AjustesPage } from '../ajustes/ajustes';
 
 @Component({
   selector: 'page-home',
@@ -25,4 +26,7 @@ export class HomePage {
     this.navCtrl.push(RegistroPage);
   }
 
+  Ajustes(){
+    this.navCtrl.push(AjustesPage);
+  }
 }
