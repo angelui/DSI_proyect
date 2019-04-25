@@ -5,8 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-
-
 import { AjustesPage } from '../pages/ajustes/ajustes';
 import { CerrarSesionPage } from '../pages/cerrar-sesion/cerrar-sesion';
 import { CompartirPage } from '../pages/compartir/compartir';
