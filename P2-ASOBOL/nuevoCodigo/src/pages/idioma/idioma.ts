@@ -15,11 +15,41 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class IdiomaPage {
 
+  public form = [
+    {val: 'Español', isChecked: true},
+    {val: 'Inglés', isChecked: false},
+    {val: 'Alemán', isChecked: false},
+    {val: 'Portugués', isChecked: false},
+    {val: 'Chino', isChecked: false}
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IdiomaPage');
+  }
+
+  actualizarIdiomas(){
+    var name;
+    var bool;
+    for(let entry of this.form){
+      if(entry.isChecked == true){
+        name = entry.val; 
+        bool = true;
+      }
+      else{
+        bool = false;
+      }
+    }
+    if(bool == false){
+      this.form[0].isChecked = true;
+    }
+    for(let entry of this.form){
+      if(entry.val != name){
+        entry.isChecked = false; 
+      }
+    }
   }
 
 }

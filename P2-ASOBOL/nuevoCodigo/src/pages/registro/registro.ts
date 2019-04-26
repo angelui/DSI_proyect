@@ -16,20 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistroPage {
 
-  /*checkboxs = [
-    {
-      name: 'Paciente',
-      selected: true
-    },
-    {
-      name: 'Doctor',
-      selected: false
-    },
-  ];*/
-
-  paciente = true;
-  doctor = false;
-
+  public paciente:boolean = true;
+  public doctor:boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -39,10 +27,28 @@ export class RegistroPage {
   }
 
   actualizarPaciente(){
-
+    console.log(this.paciente);
+    if(this.paciente == false){
+      this.doctor=true;
+      this.paciente=false;
+    }
+    if(this.paciente == true){
+      this.doctor=false;
+      this.paciente=true;
+    }
   }
 
   actualizarDoctor(){
+    console.log(this.doctor);
+    if(this.doctor == false){
+      this.doctor=false;
+      this.paciente=true;
+    }
+    if(this.doctor == true){
+      this.doctor=true;
+      this.paciente=false;
+    }
   }
+
 
 }

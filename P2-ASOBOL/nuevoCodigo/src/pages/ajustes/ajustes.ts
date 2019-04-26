@@ -10,7 +10,6 @@ import { ExportarDatosPage } from '../exportar-datos/exportar-datos';
 import { IdiomaPage } from '../idioma/idioma';
 import { MonedasNivelPage } from '../monedas-nivel/monedas-nivel';
 import { NotificacionesPage } from '../notificaciones/notificaciones';
-import { PrivacidadPage } from '../privacidad/privacidad';
 import { TemaPage } from '../tema/tema';
 import { TerminosCondicionesPage } from '../terminos-condiciones/terminos-condiciones';
 import { TipoUnidadPage } from '../tipo-unidad/tipo-unidad';
@@ -42,10 +41,6 @@ export class AjustesPage {
 
   MostrarTipoUnidad(){
     this.navCtrl.push(TipoUnidadPage);
-  }
-
-  MostrarPrivacidad(){
-    this.navCtrl.push(PrivacidadPage);
   }
 
   MostrarNotificaciones(){
