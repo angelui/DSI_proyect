@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {HomePage} from '../home/home';
 
 /**
  * Generated class for the CerrarSesionPage page.
@@ -22,4 +23,8 @@ export class CerrarSesionPage {
     console.log('ionViewDidLoad CerrarSesionPage');
   }
 
+  VolverInicio(){
+    this.navCtrl.push(HomePage);
+  }
 }
+

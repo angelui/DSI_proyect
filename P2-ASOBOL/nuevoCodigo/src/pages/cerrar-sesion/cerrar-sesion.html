@@ -10,9 +10,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content text-center>
     <div class = "despedida">
       <img class="gif" src="https://media.giphy.com/media/GB0lKzzxIv1te/giphy.gif"><img/>
-  
+      <div class = "fin">
+        <h1><strong>¡ACABAS DE CERRAR SESIÓN!</strong></h1>
+        <h3>No olvides que puedes volver a entrar en ella pulsando en el botón que tienes abajo</h3>
+      </div>
     </div>
+
+    <button class = "boton" ion-button (click)="VolverInicio()">Volver a inicio</button>
   </ion-content>
