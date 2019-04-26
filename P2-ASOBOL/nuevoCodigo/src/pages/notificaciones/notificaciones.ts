@@ -15,6 +15,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NotificacionesPage {
 
+  notificaciones = [
+    {
+      name: 'Revisiones doctor',
+      selected: true
+    },
+    {
+      name: 'Subida de nivel',
+      selected: true
+    },
+    {
+      name: 'Alarma nueva introducción de datos',
+      selected: true
+    },
+    {
+      name: 'Resumen registro diario',
+      selected: true
+    },
+    {
+      name: 'Resumen registros semanales',
+      selected: true
+    },
+    {
+      name: 'Resumen registros mensuales',
+      selected: true
+    },
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

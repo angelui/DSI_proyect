@@ -11,5 +11,39 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-label class="titulo">Personaliza tus notificaciones</ion-label>
+  <p>Tienes que activar la configuración de las notificaciones para escoger qué notificaciones quieres recibir.</p>
 
+  <ion-list>
+    <ion-item>
+      <ion-label>Revisiones doctor</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Subida de nivel</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alarma nueva introducción de datos</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resumen registro diario</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resumen registros semanales</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resumen registros mensuales</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+  </ion-list>
+  
+  
+  <!--<ion-item *ngFor="let toggle of notificaciones">
+        <ion-label>{{ toggle.name }}</ion-label>
+        <ion-toggle checked [(ngModel)]="toggle.selected" [name]="toggle.name"></ion-toggle>
+  </ion-item>-->
 </ion-content>
