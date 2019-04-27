@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AjustesPage } from '../ajustes/ajustes';
 import { ListadoDatosPage } from '../listado-datos/listado-datos'
+import { EstadisticasPage } from '../estadisticas/estadisticas'
 
 /**
  * Generated class for the PaginaPacientePage page.
@@ -30,6 +31,10 @@ export class PaginaPacientePage {
 
   listado(){
     this.navCtrl.push(ListadoDatosPage);
+  }
+
+  estadisticas(){
+    this.navCtrl.push(EstadisticasPage);
   }
 
 }

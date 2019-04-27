@@ -10,6 +10,7 @@ import { CerrarSesionPage } from '../pages/cerrar-sesion/cerrar-sesion';
 import { CompartirPage } from '../pages/compartir/compartir';
 import { ConocenosPage } from '../pages/conocenos/conocenos';
 import { EditarPerfilPage } from '../pages/editar-perfil/editar-perfil';
+import { EstadisticasPage } from '../pages/estadisticas/estadisticas';
 import { ExportarDatosPage } from '../pages/exportar-datos/exportar-datos';
 import { HomePage } from '../pages/home/home';
 import { IdiomaPage } from '../pages/idioma/idioma';
@@ -32,6 +33,7 @@ import { ListadoDatosPage } from '../pages/listado-datos/listado-datos'
     CompartirPage,
     ConocenosPage,
     EditarPerfilPage,
+    EstadisticasPage,
     ExportarDatosPage,
     HomePage,
     IdiomaPage,
@@ -58,6 +60,7 @@ import { ListadoDatosPage } from '../pages/listado-datos/listado-datos'
     CompartirPage,
     ConocenosPage,
     EditarPerfilPage,
+    EstadisticasPage,
     ExportarDatosPage,
     HomePage,
     IdiomaPage,
