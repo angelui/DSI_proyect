@@ -19,6 +19,7 @@ export class EstadisticasPage {
   @ViewChild('lineCanvas') lineCanvas;
 
   lineChart: any;
+  email: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -56,5 +57,8 @@ export class EstadisticasPage {
           ]
       }
     });
+  }
+  findPaciente(){
+    console.log(this.email);
   }
 }

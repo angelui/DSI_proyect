@@ -2,8 +2,15 @@ page-pagina-paciente {
 
 }
 
+
+.img1{
+    float:left;
+}
+
 .titulo-pagpaciente{
-    text-align: center;
+    float: left;
+    display: flex;
+    justify-content: center;
 }
 .ajustes{
     float: right;

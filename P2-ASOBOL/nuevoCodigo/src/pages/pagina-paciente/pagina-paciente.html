@@ -6,16 +6,19 @@
 -->
 <ion-header>
     <ion-navbar>
-        <img class="img" alt="logo" height="40" src="../../assets/imgs/logo.png"><img/>
-        <ion-title class="titulo-pagpaciente" align-title="center"><strong>
-          ASOBOL
-        </strong></ion-title>
-        <button class = "ajustes" (click) = "ajustes()" ><ion-icon name="settings"></ion-icon></button>
+      
+          <img class="img" alt="logo" height="40" src="../../assets/imgs/logo.png"><img/>
+          <ion-title class="titulo-pagpaciente"><strong>
+            ASOBOL
+          </strong></ion-title>
+          <button class = "ajustes" (click) = "ajustes()" ><ion-icon name="settings"></ion-icon></button>
+      
       </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <div class = "BotonesInicio">
+        <button class = "boton" ion-button (click) = "listado()">Información paciente</button>
         <button class = "boton" ion-button >Insertar medición</button>
         <button class = "boton" ion-button (click) = "listado()">Ver listado de datos</button>
         <button class = "boton" ion-button (click) = "estadisticas()">Ver estadísticas</button>
