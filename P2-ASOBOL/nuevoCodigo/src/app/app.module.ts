@@ -23,7 +23,8 @@ import { TemaPage } from '../pages/tema/tema';
 import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
 import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
 import { PaginaPacientePage } from '../pages/pagina-paciente/pagina-paciente';
-import { ListadoDatosPage } from '../pages/listado-datos/listado-datos'
+import { ListadoDatosPage } from '../pages/listado-datos/listado-datos';
+import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ListadoDatosPage } from '../pages/listado-datos/listado-datos'
     RegistroPage,
     TemaPage,
     TerminosCondicionesPage,
+    TiendamonedasPage,
     TipoUnidadPage,
     PaginaPacientePage,
     ListadoDatosPage
@@ -72,6 +74,7 @@ import { ListadoDatosPage } from '../pages/listado-datos/listado-datos'
     TemaPage,
     TerminosCondicionesPage,
     TipoUnidadPage,
+    TiendamonedasPage,
     PaginaPacientePage,
     ListadoDatosPage
   ],

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TiendamonedasPage } from '../tiendamonedas/tiendamonedas';
+import { AjustesPage } from '../ajustes/ajustes';
 
 /**
- * Generated class for the MonedasNivelPage page.
+ * Generated class for the TiendamonedasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +11,20 @@ import { TiendamonedasPage } from '../tiendamonedas/tiendamonedas';
 
 @IonicPage()
 @Component({
-  selector: 'page-monedas-nivel',
-  templateUrl: 'monedas-nivel.html',
+  selector: 'page-tiendamonedas',
+  templateUrl: 'tiendamonedas.html',
 })
-export class MonedasNivelPage {
+export class TiendamonedasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MonedasNivelPage');
+    console.log('ionViewDidLoad TiendamonedasPage');
   }
 
-  tienda(){
-    this.navCtrl.push(TiendamonedasPage);
+  ajustes(){
+    this.navCtrl.push(AjustesPage);
   }
 
 }

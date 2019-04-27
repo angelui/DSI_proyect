@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { AjustesPage } from '../ajustes/ajustes';
 
 /**
  * Generated class for the EstadisticasPage page.
@@ -58,7 +59,12 @@ export class EstadisticasPage {
       }
     });
   }
+
   findPaciente(){
     console.log(this.email);
+  }
+
+  ajustes(){
+    this.navCtrl.push(AjustesPage);
   }
 }

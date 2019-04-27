@@ -18,6 +18,7 @@ import { PrivacidadPage } from '../pages/privacidad/privacidad';
 import { RegistroPage } from '../pages/registro/registro';
 import { TemaPage } from '../pages/tema/tema';
 import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
+import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
 import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
 
 @Component({

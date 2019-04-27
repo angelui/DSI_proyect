@@ -1,23 +1,24 @@
 <ion-header>
   <ion-navbar>
-  	<img class="img" alt="logo" height="40" src="../../assets/imgs/logo.png"><img/>
-    <ion-title class="titulo" align-title="center"><strong>
-      ASOBOL
-    </strong></ion-title>
+      <img class="img" alt="logo" height="40" src="../../assets/imgs/logo.png"><img/>
+      <ion-title class="titulo-pagpaciente"><strong>
+        ASOBOL
+      </strong></ion-title>
+      <button class = "ajustes" (click) = "ajustes()" ><ion-icon name="settings"></ion-icon></button>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-title><strong>Estadisticas</strong></ion-title>
-    <form (ngSubmit)="findPaciente()">
-          <ion-item class="item" no-lines>
-              <ion-label>Paciente:</ion-label>
-              <ion-input type="email" placeholder="E-mail del paciente" name="email" [(ngModel)]="email"></ion-input>
-          </ion-item>
-          <div style="text-align: center">
-              <button class = "boton-dato" ion-button type = "submit">Buscar</button>
-          </div>  
-    </form>
+  <ion-title><strong>Estadisticas</strong></ion-title>
+  <form (ngSubmit)="findPaciente()">
+    <ion-item class="item" no-lines>
+        <ion-label>Paciente:</ion-label>
+        <ion-input type="email" placeholder="E-mail del paciente" name="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <div style="text-align: center">
+        <button class = "boton-dato" ion-button type = "submit">Buscar</button>
+    </div>  
+  </form>
     
   <ion-item>
     <ion-label>Datos:</ion-label>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AjustesPage } from '../ajustes/ajustes';
-import { ListadoDatosPage } from '../listado-datos/listado-datos'
-import { EstadisticasPage } from '../estadisticas/estadisticas'
+import { ListadoDatosPage } from '../listado-datos/listado-datos';
+import { EstadisticasPage } from '../estadisticas/estadisticas';
 
 /**
  * Generated class for the PaginaPacientePage page.
