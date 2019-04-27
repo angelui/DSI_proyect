@@ -10,16 +10,15 @@
         <ion-title class="titulo-pagpaciente" align-title="center"><strong>
           ASOBOL
         </strong></ion-title>
-        <button class = "ajustes" ><ion-icon name="settings"></ion-icon></button>
+        <button class = "ajustes" (click) = "ajustes()" ><ion-icon name="settings"></ion-icon></button>
       </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <div class = "BotonesInicio">
         <button class = "boton" ion-button >Insertar medición</button>
-        <button class = "boton" ion-button >Ver listado de datos</button>
-        <button class = "boton" ion-button (click)="Estadisticas()">Ver estadísticas</button>
+        <button class = "boton" ion-button (click) = "listado()">Ver listado de datos</button>
+        <button class = "boton" ion-button >Ver estadísticas</button>
         <button class = "boton" ion-button >Comunidad ASOBOL</button>
     </div>
-
 </ion-content>

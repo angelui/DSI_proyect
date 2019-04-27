@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EstadisticasPage } from '../estadisticas/estadisticas';
+import { AjustesPage } from '../ajustes/ajustes';
+import { ListadoDatosPage } from '../listado-datos/listado-datos'
 
 /**
  * Generated class for the PaginaPacientePage page.
@@ -23,8 +24,12 @@ export class PaginaPacientePage {
     console.log('ionViewDidLoad PaginaPacientePage');
   }
 
-  Estadisticas(){
-  	this.navCtrl.push(EstadisticasPage);
+  ajustes(){
+    this.navCtrl.push(AjustesPage);
+  }
+
+  listado(){
+    this.navCtrl.push(ListadoDatosPage);
   }
 
 }

@@ -10,7 +10,6 @@ import { CerrarSesionPage } from '../pages/cerrar-sesion/cerrar-sesion';
 import { CompartirPage } from '../pages/compartir/compartir';
 import { ConocenosPage } from '../pages/conocenos/conocenos';
 import { EditarPerfilPage } from '../pages/editar-perfil/editar-perfil';
-import { EstadisticasPage } from '../pages/estadisticas/estadisticas';
 import { ExportarDatosPage } from '../pages/exportar-datos/exportar-datos';
 import { HomePage } from '../pages/home/home';
 import { IdiomaPage } from '../pages/idioma/idioma';
@@ -22,7 +21,8 @@ import { RegistroPage } from '../pages/registro/registro';
 import { TemaPage } from '../pages/tema/tema';
 import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
 import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
-import { PaginaPacientePage }from '../pages/pagina-paciente/pagina-paciente';
+import { PaginaPacientePage } from '../pages/pagina-paciente/pagina-paciente';
+import { ListadoDatosPage } from '../pages/listado-datos/listado-datos'
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { PaginaPacientePage }from '../pages/pagina-paciente/pagina-paciente';
     CompartirPage,
     ConocenosPage,
     EditarPerfilPage,
-    EstadisticasPage,
     ExportarDatosPage,
     HomePage,
     IdiomaPage,
@@ -44,7 +43,8 @@ import { PaginaPacientePage }from '../pages/pagina-paciente/pagina-paciente';
     TemaPage,
     TerminosCondicionesPage,
     TipoUnidadPage,
-    PaginaPacientePage
+    PaginaPacientePage,
+    ListadoDatosPage
   ],
   imports: [
     BrowserModule,
@@ -58,7 +58,6 @@ import { PaginaPacientePage }from '../pages/pagina-paciente/pagina-paciente';
     CompartirPage,
     ConocenosPage,
     EditarPerfilPage,
-    EstadisticasPage,
     ExportarDatosPage,
     HomePage,
     IdiomaPage,
@@ -70,7 +69,8 @@ import { PaginaPacientePage }from '../pages/pagina-paciente/pagina-paciente';
     TemaPage,
     TerminosCondicionesPage,
     TipoUnidadPage,
-    PaginaPacientePage
+    PaginaPacientePage,
+    ListadoDatosPage
   ],
   providers: [
     StatusBar,
