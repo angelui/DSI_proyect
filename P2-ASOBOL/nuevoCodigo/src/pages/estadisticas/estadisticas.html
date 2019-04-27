@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+  	<img class="img" alt="logo" height="40" src="../../assets/imgs/logo.png"><img/>
+    <ion-title class="titulo" align-title="center"><strong>
+      ASOBOL
+    </strong></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Datos:</ion-label>
+    <ion-select placeholder="Glucemia" okText="Aceptar" cancelText="Cancelar">
+      <ion-option>Glucemia (mg/dL)</ion-option>
+      <ion-option>Hemoglobina</ion-option>
+      <ion-option>Unidades de pan</ion-option>
+      <ion-option>Peso</ion-option>
+      <ion-option>Pulso</ion-option>
+      <ion-option>Pres. sistólica</ion-option>
+      <ion-option>Pres. diastólica</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Promedio por</ion-label>
+    <ion-select placeholder="mes" okText="Aceptar" cancelText="Cancelar">
+      <ion-option>Día</ion-option>
+      <ion-option>Mes</ion-option>
+      <ion-option>4 meses</ion-option>
+      <ion-option>6 meses</ion-option>
+      <ion-option>Año</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      Gráfico de datos
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

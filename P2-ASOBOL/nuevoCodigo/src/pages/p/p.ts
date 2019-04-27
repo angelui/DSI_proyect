@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PaginaPacientePage } from '../pagina-paciente/pagina-paciente';
 
 /**
- * Generated class for the InicioSesionPage page.
+ * Generated class for the PPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { PaginaPacientePage } from '../pagina-paciente/pagina-paciente';
 
 @IonicPage()
 @Component({
-  selector: 'page-inicio-sesion',
-  templateUrl: 'inicio-sesion.html',
+  selector: 'page-p',
+  templateUrl: 'p.html',
 })
-export class InicioSesionPage {
+export class PPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InicioSesionPage');
-  }
-
-  iniciarSesion(){
-    this.navCtrl.push(PaginaPacientePage);
+    console.log('ionViewDidLoad PPage');
   }
 
 }
