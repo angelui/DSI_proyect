@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EstadisticasPage } from '../estadisticas/estadisticas';
 
 /**
- * Generated class for the PaginaPacientePage page.
+ * Generated class for the EstadisticasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { EstadisticasPage } from '../estadisticas/estadisticas';
 
 @IonicPage()
 @Component({
-  selector: 'page-pagina-paciente',
-  templateUrl: 'pagina-paciente.html',
+  selector: 'page-estadisticas',
+  templateUrl: 'estadisticas.html',
 })
-export class PaginaPacientePage {
+export class EstadisticasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PaginaPacientePage');
-  }
-
-  Estadisticas(){
-  	this.navCtrl.push(EstadisticasPage);
+    console.log('ionViewDidLoad EstadisticasPage');
   }
 
 }
