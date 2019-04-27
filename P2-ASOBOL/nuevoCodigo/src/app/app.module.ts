@@ -21,6 +21,7 @@ import { RegistroPage } from '../pages/registro/registro';
 import { TemaPage } from '../pages/tema/tema';
 import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
 import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
+import { PaginaPacientePage }from '../pages/pagina-paciente/pagina-paciente';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
     RegistroPage,
     TemaPage,
     TerminosCondicionesPage,
-    TipoUnidadPage
+    TipoUnidadPage,
+    PaginaPacientePage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
     RegistroPage,
     TemaPage,
     TerminosCondicionesPage,
-    TipoUnidadPage
+    TipoUnidadPage,
+    PaginaPacientePage
   ],
   providers: [
     StatusBar,
