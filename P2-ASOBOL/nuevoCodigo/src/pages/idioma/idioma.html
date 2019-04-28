@@ -12,10 +12,21 @@
 
 <ion-content padding>
   <ion-label>Selecciona el idioma de tu app:</ion-label>
-  <ion-list>
+  <ion-item class="item">
+    <ion-label>Idioma</ion-label>
+    <ion-select value="español" okText="Aceptar" cancelText="Cancelar">
+      <ion-option value="español" selected>Español</ion-option>
+      <ion-option value="ingles">Inglés</ion-option>
+      <ion-option value="aleman">Alemán</ion-option>
+      <ion-option value="portugues">Portugués</ion-option>
+      <ion-option value="persa">Persa</ion-option>
+    </ion-select>
+  </ion-item>
+  <!--<ion-list>
     <ion-item *ngFor="let entry of form">
       <ion-label>{{entry.val}}</ion-label>
       <ion-checkbox [(ngModel)]="entry.isChecked" (ionChange)="actualizarIdiomas()"></ion-checkbox>
     </ion-item>
-  </ion-list>
+  </ion-list>>-->
 </ion-content>
+

@@ -11,20 +11,21 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-label>Selecciona tus unidades de medidas:</ion-label>
   <ion-list>
     <!--<ion-list-header>Single Selection</ion-list-header>-->
-    <ion-item>
+    <ion-item class="unidades">
       <ion-label>Altura</ion-label>
       <ion-select okText="Aceptar" cancelText="Cancelar">
         <ion-option>m (metros)</ion-option>
-        <ion-option>cm (centímetros)</ion-option>
+        <ion-option selected>cm (centímetros)</ion-option>
         <ion-option>ft (pies)</ion-option>
       </ion-select>
     </ion-item>
-    <ion-item>
+    <ion-item class="unidades">
       <ion-label>Peso</ion-label>
       <ion-select okText="Aceptar" cancelText="Cancelar">
-        <ion-option>kg (kilogramos)</ion-option>
+        <ion-option selected>kg (kilogramos)</ion-option>
         <ion-option>lb (libras)</ion-option>
       </ion-select>
     </ion-item>
