@@ -14,7 +14,6 @@ import { IdiomaPage } from '../pages/idioma/idioma';
 import { InicioSesionPage } from '../pages/inicio-sesion/inicio-sesion';
 import { MonedasNivelPage } from '../pages/monedas-nivel/monedas-nivel';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
-import { PrivacidadPage } from '../pages/privacidad/privacidad';
 import { RegistroPage } from '../pages/registro/registro';
 import { TemaPage } from '../pages/tema/tema';
 import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
