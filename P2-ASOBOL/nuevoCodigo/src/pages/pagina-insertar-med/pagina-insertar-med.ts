@@ -56,6 +56,8 @@ export class PaginaInsertarMedPage {
     console.log(this.dato);
 
     this.DatosService.addDato(this.dato);
+
+    this.navCtrl.pop();
   }
 
 }
