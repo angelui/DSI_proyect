@@ -29,7 +29,7 @@ export class EstadisticasPage {
   }
 
   ionViewDidLoad() {
-    this.datos = this.DatosService.getDatos();
+    //this.datos = this.DatosService.getDatos();
     console.log('ionViewDidLoad EstadisticasPage');
     console.log(this.getAzucar(this.datos));
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {

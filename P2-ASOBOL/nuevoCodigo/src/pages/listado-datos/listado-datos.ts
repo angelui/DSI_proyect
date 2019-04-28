@@ -25,7 +25,7 @@ export class ListadoDatosPage {
   }
 
   ionViewWillEnter() {
-    this.datos = this.DatosService.getDatos();
+    //this.datos = this.DatosService.getDatos();
   }
 
   presentAlert(data: Datos) {

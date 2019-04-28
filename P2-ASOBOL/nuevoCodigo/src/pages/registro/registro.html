@@ -21,46 +21,46 @@
     <ion-toggle [(ngModel)]="doctor" (ionChange)="actualizarDoctor()"></ion-toggle>
   </ion-item>
   
-  <form *ngIf="paciente" class="formulario_registro">
+  <form *ngIf="paciente" (ngSubmit)="onAddPaciente()" class="formulario_registro">
       <ion-label>Rellene el siguiente formulario:</ion-label>
     <ion-item>
       <ion-label class="titulos_campos">Nombre*</ion-label>
-      <ion-input class="entradas" type="text" placeholder="Nombre" name="nombre" required></ion-input>
+      <ion-input class="entradas" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="pacienteValue.nombre" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Apellidos*</ion-label>
-      <ion-input class="entradas" type="text" placeholder="Apellidos" name="apellidos" required></ion-input>
+      <ion-input class="entradas" type="text" placeholder="Apellidos" name="apellidos" [(ngModel)]="pacienteValue.apellidos" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Correo electrónico*</ion-label>
-      <ion-input class="entradas" type="email" placeholder="Correo electrónico" name="correo_registro" required></ion-input>
+      <ion-input class="entradas" type="email" placeholder="Correo electrónico" name="correo_registro" [(ngModel)]="pacienteValue.correoElectronico" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Contraseña*</ion-label>
-      <ion-input class="entradas" type="password" placeholder="Contraseña" name="contraseña_registro" required></ion-input>
+      <ion-input class="entradas" type="password" placeholder="Contraseña" name="contraseña_registro" [(ngModel)]="pacienteValue.contrasena" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Teléfono</ion-label>
-      <ion-input class="entradas" type="tel" placeholder="Teléfono" name="telefono"></ion-input>
+      <ion-input class="entradas" type="tel" placeholder="Teléfono" name="telefono" [(ngModel)]="pacienteValue.telefono"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Estautura (cm)</ion-label>
-      <ion-input class="entradas" type="number" placeholder="Estatura" name="estatura"></ion-input>
+      <ion-input class="entradas" type="number" placeholder="Estatura" name="estatura" [(ngModel)]="pacienteValue.estatura"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Peso (kg)</ion-label>
-      <ion-input class="entradas" type="number" placeholder="Peso" name="peso"></ion-input>
+      <ion-input class="entradas" type="number" placeholder="Peso" name="peso" [(ngModel)]="pacienteValue.peso"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Año de nacimiento</ion-label>
-      <ion-input class="entradas" type="number" placeholder="Año de nacimiento" name="nacimiento"></ion-input>
+      <ion-input class="entradas" type="number" placeholder="Año de nacimiento" name="nacimiento" [(ngModel)]="pacienteValue.anoNacimiento"></ion-input>
     </ion-item>
     <ion-label class="etiqueta_obligatorio">*Campo obligatorio</ion-label>
     <button class="boton" ion-button block type="submit">Aceptar</button>
   </form>
 
   
-  <form *ngIf="doctor" class="formulario_registro">
+  <form *ngIf="doctor" (ngSubmit)="onAddDoctor()" class="formulario_registro">
     <ion-label>Rellene el siguiente formulario:</ion-label>
     <ion-item>
       <ion-label class="titulos_campos">Nombre*</ion-label>

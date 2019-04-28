@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { InicioSesionPage } from '../inicio-sesion/inicio-sesion';
+import { Pacientes } from '../../models/pacientes.model';
+import { PacientesService } from '../../services/pacientes-service';
+import { Observable } from 'rxjs/Observable';
+
 
 /**
  * Generated class for the RegistroPage page.
@@ -19,7 +24,12 @@ export class RegistroPage {
   public paciente:boolean = true;
   public doctor:boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  str: string;
+  num: number;
+
+  pacienteValue = { nombre: this.str, apellidos: this.str, correoElectronico: this.str, contrasena: this.str, telefono: this.num, estatura: this.num, peso: this.num, anoNacimiento: this.num};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pacienteService: PacientesService) {
   }
 
   ionViewDidLoad() {
@@ -50,5 +60,13 @@ export class RegistroPage {
     }
   }
 
+  onAddPaciente(){
+    this.pacienteService.addPaciente(this.pacienteValue);
+    this.navCtrl.pop();
+  }
+
+  InicioSesion(){
+  	this.navCtrl.push(InicioSesionPage);
+  }
 
 }

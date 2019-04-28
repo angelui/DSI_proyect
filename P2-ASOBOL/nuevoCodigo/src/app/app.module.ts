@@ -25,8 +25,14 @@ import { PaginaPacientePage } from '../pages/pagina-paciente/pagina-paciente';
 import { ListadoDatosPage } from '../pages/listado-datos/listado-datos';
 import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
 import { DatosService } from '../services/datos-service';
+import { PacientesService } from '../services/pacientes-service';
 import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-insertar-med';
 
+/*Base de datos*/
+import { Services } from '@angular/core/src/view';
+import { FIREBASE_CONFIG } from '../app/firebase.credentials';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -54,7 +60,9 @@ import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-inser
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -84,7 +92,8 @@ import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-inser
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatosService
+    DatosService,
+    PacientesService
   ]
 })
 export class AppModule {}
