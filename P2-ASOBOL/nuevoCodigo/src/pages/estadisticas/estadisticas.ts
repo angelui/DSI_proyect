@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
 import { AjustesPage } from '../ajustes/ajustes';
+import { Datos } from '../../models/datos.model';
+import { DatosService } from '../../services/datos-service';
 
 /**
  * Generated class for the EstadisticasPage page.
@@ -21,12 +23,15 @@ export class EstadisticasPage {
 
   lineChart: any;
   email: string;
+  datos: Datos[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private DatosService: DatosService) {
   }
 
   ionViewDidLoad() {
+    this.datos = this.DatosService.getDatos();
     console.log('ionViewDidLoad EstadisticasPage');
+    console.log(this.getAzucar(this.datos));
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
 
       type: 'line',
@@ -52,7 +57,7 @@ export class EstadisticasPage {
                   pointHoverBorderWidth: 2,
                   pointRadius: 1,
                   pointHitRadius: 10,
-                  data: [65, 59, 80, 81, 56, 55, 40],
+                  data: this.getAzucar(this.datos),
                   spanGaps: false,
               }
           ]
@@ -66,5 +71,14 @@ export class EstadisticasPage {
 
   ajustes(){
     this.navCtrl.push(AjustesPage);
+  }
+
+  getAzucar(datos: Datos[]){
+    let azucarArray: number[] = [];
+    datos.forEach(dato => {
+      console.log(dato.azucar);
+      azucarArray.push(dato.azucar);
+    });
+    return azucarArray;
   }
 }

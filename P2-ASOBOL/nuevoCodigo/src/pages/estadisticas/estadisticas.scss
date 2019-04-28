@@ -1,4 +1,17 @@
-page-estadisticas {   
+page-estadisticas {
+    .titulo{
+        text-align: center;
+        margin-right: 10%;
+        margin-top: -2%;
+    }
+    
+    .img{
+        float:left;
+    }
+    
+    .BotonesInicio{
+        margin-top: 45%;
+    }    
 
     .ios, .md {
         .scroll-content {
@@ -11,8 +24,4 @@ page-estadisticas {
 
     }
 
-}
-
-.contenidoSubpag{
-    margin-top: 20%;
 }
