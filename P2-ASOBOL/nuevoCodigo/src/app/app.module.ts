@@ -25,6 +25,9 @@ import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
 import { PaginaPacientePage } from '../pages/pagina-paciente/pagina-paciente';
 import { ListadoDatosPage } from '../pages/listado-datos/listado-datos';
 import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
+import { DatosService } from '../services/datos-service';
+import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-insertar-med';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
     TiendamonedasPage,
     TipoUnidadPage,
     PaginaPacientePage,
-    ListadoDatosPage
+    ListadoDatosPage,
+    PaginaInsertarMedPage
   ],
   imports: [
     BrowserModule,
@@ -76,12 +80,14 @@ import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
     TipoUnidadPage,
     TiendamonedasPage,
     PaginaPacientePage,
-    ListadoDatosPage
+    ListadoDatosPage,
+    PaginaInsertarMedPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatosService
   ]
 })
 export class AppModule {}

@@ -20,6 +20,8 @@ import { TemaPage } from '../pages/tema/tema';
 import { TerminosCondicionesPage } from '../pages/terminos-condiciones/terminos-condiciones';
 import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
 import { TipoUnidadPage } from '../pages/tipo-unidad/tipo-unidad';
+import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-insertar-med'
+
 
 @Component({
   templateUrl: 'app.html'
