@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AjustesPage } from '../ajustes/ajustes';
 import { ListadoDatosPage } from '../listado-datos/listado-datos';
 import { EstadisticasPage } from '../estadisticas/estadisticas';
+import { PaginaInsertarMedPage } from '../pagina-insertar-med/pagina-insertar-med';
 
 /**
  * Generated class for the PaginaPacientePage page.
@@ -35,6 +36,10 @@ export class PaginaPacientePage {
 
   estadisticas(){
     this.navCtrl.push(EstadisticasPage);
+  }
+
+  insertarMed(){
+    this.navCtrl.push(PaginaInsertarMedPage);
   }
 
 }
