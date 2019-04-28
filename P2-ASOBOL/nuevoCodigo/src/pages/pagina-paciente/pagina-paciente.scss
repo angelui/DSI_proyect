@@ -1,7 +1,10 @@
 page-pagina-paciente {
 
-}
+    .BotonesInicio{
+        margin-top: 20%;
+    }
 
+}
 
 .img1{
     float:left;
@@ -18,4 +21,22 @@ page-pagina-paciente {
     font-size: 173%;
     margin-top: 1%;
     opacity: 1;
+}
+
+.nivel, .nivelT{
+    float: left;
+}
+
+.monedas, .monedasT{
+    float: right;
+}
+
+.nivelT, .monedasT{
+    font-size: 120%;
+}
+
+.nivel, .monedas{
+    height: 4%;
+    width: 7%;
+    margin: 4%;
 }
