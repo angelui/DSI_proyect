@@ -1,12 +1,16 @@
-page-monedas-nivel {
-
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 .Monedica{
-    font-size: 27px;
+    font-size: 26.7px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
 }
 
 .lista{
     text-align: justify;
     margin-left: 10%;
+}
+
+.listagrande{
+    margin-bottom: 5%;
 }

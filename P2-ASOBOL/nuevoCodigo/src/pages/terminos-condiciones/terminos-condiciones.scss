@@ -1,27 +1,29 @@
-page-terminos-condiciones {
-
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 p{
     text-align: justify;
 }
 
 .Condiciones {
-    text-align: justify;
-    font-size: 24.5px;
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .Eliminacion {
-    text-align: justify;
+    text-align: center;
     font-size: 20px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .Politica{
     text-align: center;
-    font-size: 27.2px; 
+    font-size: 26px; 
+    font-family: 'Nunito', sans-serif;
 }
 
-h1{
+.security{
     text-align: center;
-    font-size: 28px;
+    font-size: 43px;
+    font-family: 'Nunito', sans-serif;
 }

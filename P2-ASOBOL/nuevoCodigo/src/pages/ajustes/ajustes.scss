@@ -1,5 +1,4 @@
-page-ajustes {
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 .ajustesGrande{
     border: 2px solid black;
@@ -14,5 +13,11 @@ page-ajustes {
     border-bottom-style: none;
     border-right-style: none;
     border-left-style: none;
+    
+}
+
+.titulillo{
+    font-family: 'Nunito', sans-serif;
+    font-size: 21px;
 }
 
