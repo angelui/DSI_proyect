@@ -64,39 +64,39 @@
     <ion-label>Rellene el siguiente formulario:</ion-label>
     <ion-item>
       <ion-label class="titulos_campos">Nombre*</ion-label>
-      <ion-input class="entradas" type="text" placeholder="Nombre" name="nombre" required></ion-input>
+      <ion-input class="entradas" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="doctorValue.nombre" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Apellidos*</ion-label>
-      <ion-input class="entradas" type="text" placeholder="Apellidos" name="apellidos" required></ion-input>
+      <ion-input class="entradas" type="text" placeholder="Apellidos" name="apellidos" [(ngModel)]="doctorValue.apellidos" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Correo electrónico*</ion-label>
-      <ion-input class="entradas" type="email" placeholder="Correo electrónico" name="correo_registro" required></ion-input>
+      <ion-input class="entradas" type="email" placeholder="Correo electrónico" name="correo_registro" [(ngModel)]="doctorValue.correoElectronico" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Contraseña*</ion-label>
-      <ion-input class="entradas" type="password" placeholder="Contraseña" name="contraseña_registro" required></ion-input>
+      <ion-input class="entradas" type="password" placeholder="Contraseña" name="contraseña_registro" [(ngModel)]="doctorValue.contrasena" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Teléfono</ion-label>
-      <ion-input class="entradas" type="tel" placeholder="Teléfono" name="telefono"></ion-input>
+      <ion-input class="entradas" type="tel" placeholder="Teléfono" name="telefono" [(ngModel)]="doctorValue.telefono"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Años de experiencia</ion-label>
-      <ion-input class="entradas" type="number" placeholder="Años de experiencia" name="experiencia"></ion-input>
+      <ion-input class="entradas" type="number" placeholder="Años de experiencia" name="experiencia" [(ngModel)]="doctorValue.anosExperiencia"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Número de colegiado*</ion-label>
-      <ion-input class="entradas" type="number" placeholder="Número de colegiado" name="colegiado" required></ion-input>
+      <ion-input class="entradas" type="number" placeholder="Número de colegiado" name="colegiado" [(ngModel)]="doctorValue.numeroColegiado" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Centro de trabajo</ion-label>
-      <ion-input class="entradas" type="text" placeholder="Centro de trabajo" name="centro_trabajo"></ion-input>
+      <ion-input class="entradas" type="text" placeholder="Centro de trabajo" name="centro_trabajo" [(ngModel)]="doctorValue.centro"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Especialidad*</ion-label>
-      <ion-input class="entradas" type="text" placeholder="Especialidad" name="especialidad" required></ion-input>
+      <ion-input class="entradas" type="text" placeholder="Especialidad" name="especialidad" [(ngModel)]="doctorValue.especialidad" required></ion-input>
     </ion-item>
     <ion-label class="etiqueta_obligatorio">*Campo obligatorio</ion-label>
     <button class="boton" ion-button block type="submit">Aceptar</button>

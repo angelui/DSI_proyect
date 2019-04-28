@@ -26,6 +26,7 @@ import { ListadoDatosPage } from '../pages/listado-datos/listado-datos';
 import { TiendamonedasPage } from '../pages/tiendamonedas/tiendamonedas';
 import { DatosService } from '../services/datos-service';
 import { PacientesService } from '../services/pacientes-service';
+import { DoctoresService } from '../services/doctores-service';
 import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-insertar-med';
 
 /*Base de datos*/
@@ -93,7 +94,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatosService,
-    PacientesService
+    PacientesService,
+    DoctoresService
   ]
 })
 export class AppModule {}
