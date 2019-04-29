@@ -4,6 +4,7 @@ import { AjustesPage } from '../ajustes/ajustes';
 import { ListadoDatosPage } from '../listado-datos/listado-datos';
 import { EstadisticasPage } from '../estadisticas/estadisticas';
 import { PaginaInsertarMedPage } from '../pagina-insertar-med/pagina-insertar-med';
+import { ComunidadAsobolPage } from '../comunidad-asobol/comunidad-asobol';
 
 /**
  * Generated class for the PaginaPacientePage page.
@@ -40,6 +41,10 @@ export class PaginaPacientePage {
 
   insertarMed(){
     this.navCtrl.push(PaginaInsertarMedPage);
+  }
+
+  comunidadASOBOL(){
+    this.navCtrl.push(ComunidadAsobolPage);
   }
 
 }
