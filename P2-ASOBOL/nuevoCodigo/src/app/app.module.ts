@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { AjustesPage } from '../pages/ajustes/ajustes';
 import { CerrarSesionPage } from '../pages/cerrar-sesion/cerrar-sesion';
 import { CompartirPage } from '../pages/compartir/compartir';
+import { ComunidadAsobolPage } from '../pages/comunidad-asobol/comunidad-asobol';
 import { ConocenosPage } from '../pages/conocenos/conocenos';
 import { EditarPerfilPage } from '../pages/editar-perfil/editar-perfil';
 import { EstadisticasPage } from '../pages/estadisticas/estadisticas';
@@ -41,6 +42,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AjustesPage,
     CerrarSesionPage,
     CompartirPage,
+    ComunidadAsobolPage,
     ConocenosPage,
     EditarPerfilPage,
     EstadisticasPage,
@@ -71,6 +73,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AjustesPage,
     CerrarSesionPage,
     CompartirPage,
+    ComunidadAsobolPage,
     ConocenosPage,
     EditarPerfilPage,
     EstadisticasPage,

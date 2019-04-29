@@ -1,6 +1,6 @@
 import { Datos } from '../models/datos.model'
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Injectable()
 export class DatosService{
@@ -10,9 +10,11 @@ export class DatosService{
     {"fecha":"2","hora":"2","azucar":2,"hemoglobina":2,"ud_pan":2,"peso":2,"pulso":2,"sistolica":2,"diastolica":2,"notas":"njpwienvlejv\nkoevnwepov"}];
     */
 
-    private datosRef=this.db.list<Datos>('AsobolFirebase');
-
+    private datosRef=this.db.list<Datos>('AsobolFirebase/datos');
+    selectDato: Datos = new Datos();
     constructor(private db:AngularFireDatabase){
+
+    
     }
 
     addDato(value: Datos){
@@ -21,6 +23,7 @@ export class DatosService{
     }
 
     getDatos(){
+          
         //return this.datos;
         return this.datosRef;
     }

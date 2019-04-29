@@ -9,4 +9,5 @@ export class Datos{
     sistolica: number;
     diastolica: number
     notas: string;
+    email: string;
 }

@@ -16,12 +16,13 @@ import { DatosService } from '../../services/datos-service';
   templateUrl: 'pagina-insertar-med.html',
 })
 export class PaginaInsertarMedPage {
-
+  public emailpa: string = "v@v.v";
+  public emailpb: string = "c@c.c";
   str: string;
   num: number;
   formContent = {
-    fecha: Date,
-    hora: Date,
+    fecha: String(Date),
+    hora: String(Date),
     azucar: this.num,
     hemoglobina: this.num,
     ud_pan: this.num,
@@ -29,7 +30,8 @@ export class PaginaInsertarMedPage {
     pulso: this.num,
     sistolica: this.num,
     diastolica: this.num,
-    notas: this.str
+    notas: this.str,
+    email: this.str = this.emailpa
 }
   dato = new Datos(); 
 
@@ -41,21 +43,10 @@ export class PaginaInsertarMedPage {
   }
 
   addMedida(){
-    
-    this.dato.fecha = String(this.formContent.fecha);
-    this.dato.hora = String(this.formContent.hora);
-    this.dato.azucar = this.formContent.azucar;
-    this.dato.hemoglobina = this.formContent.hemoglobina;
-    this.dato.ud_pan = this.formContent.ud_pan;
-    this.dato.peso = this.formContent.peso;
-    this.dato.pulso = this.formContent.pulso;
-    this.dato.sistolica = this.formContent.sistolica;
-    this.dato.diastolica = this.formContent.diastolica;
-    this.dato.notas = this.formContent.notas;
 
-    console.log(this.dato);
+    console.log(this.formContent);
 
-    this.DatosService.addDato(this.dato);
+    this.DatosService.addDato(this.formContent);
 
     this.navCtrl.pop();
   }

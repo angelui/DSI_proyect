@@ -7,8 +7,6 @@ export class PacientesService{
     
     private pacientesRef=this.db.list<Pacientes>('AsobolFirebase/pacientes');
 
-    // Get a reference to the database service
-    
     constructor(private db:AngularFireDatabase){
     }
 
