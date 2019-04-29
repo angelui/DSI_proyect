@@ -11,7 +11,7 @@ export class PacientesService{
     {"fecha":"2","hora":"2","azucar":2,"hemoglobina":2,"ud_pan":2,"peso":2,"pulso":2,"sistolica":2,"diastolica":2,"notas":"njpwienvlejv\nkoevnwepov"}];
     */
 
-    private pacientesRef=this.db.list<Pacientes>('AsobolFirebase');
+    private pacientesRef=this.db.list<Pacientes>('AsobolFirebase/paciente');
 
     constructor(private db:AngularFireDatabase){
     }

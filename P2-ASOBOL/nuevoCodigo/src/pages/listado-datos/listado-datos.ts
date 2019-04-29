@@ -22,6 +22,7 @@ export class ListadoDatosPage {
   email: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertController: AlertController, private DatosService:DatosService) {
+    this.getDatos()
   }
 
   ionViewWillEnter() {
@@ -43,6 +44,17 @@ export class ListadoDatosPage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  getDatos(){
+    this.DatosService.getDatos().snapshotChanges().subscribe(item =>{
+      this.datos = [];
+      item.forEach(element =>{
+        let x = element.payload.toJSON();
+        x["$key"] = element.key
+        this.datos.push(x as Datos)
+      })
+    });
   }
 
   ionViewDidLoad() {
