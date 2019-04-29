@@ -5,4 +5,19 @@ page-tiendamonedas {
         font-family: 'Segoe UI', sans-serif;
     }
 
+    .tema{
+        float: left;
+        font-size: 120%;
+    }
+
+    .monedasC{
+        float: right;
+        width: 12%;
+        height: 14%;
+        margin-top: 10%;
+    }
+
+    ion-col{
+        cursor: pointer;
+    }
 }
