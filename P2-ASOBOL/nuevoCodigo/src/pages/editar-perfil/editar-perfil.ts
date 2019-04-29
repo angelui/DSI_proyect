@@ -24,7 +24,8 @@ export class EditarPerfilPage {
   public email:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public alertController: AlertController, public firebase:AngularFireDatabase, private PacientesService:PacientesService) {
-  this.getPacientes();
+    this.email = this.PacientesService.email;
+    this.getPacientes();
   }
 
   getPacientes(){
@@ -33,12 +34,14 @@ export class EditarPerfilPage {
       item.forEach(element =>{
         let x = element.payload.toJSON();
         x["$key"] = element.key;
-        this.pacientesdelaBase.push(x as Pacientes)
+        let y = x as Pacientes;
+        if(y.correoElectronico == this.email) this.pacientesdelaBase.push(x as Pacientes);
       })
     });
   }
   
-  LlamarPopUp(paciente: Pacientes) {
+  LlamarPopUp() {
+    let paciente = this.pacientesdelaBase[0];
     let alert = this.alertController.create({
       title: 'Registro' ,
       subTitle: paciente.nombre + ' ' + paciente.apellidos,
