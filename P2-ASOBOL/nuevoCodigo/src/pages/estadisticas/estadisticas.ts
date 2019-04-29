@@ -26,8 +26,8 @@ export class EstadisticasPage {
   email: string;
   datos: Datos[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private DatosService: DatosService, private PacientesPage:PacientesService) {
-    this.email = this.PacientesPage.email;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private DatosService: DatosService, private PacientesService:PacientesService) {
+    this.email = this.PacientesService.email;
     this.getDatos()
   }
 
@@ -39,7 +39,7 @@ export class EstadisticasPage {
 
       type: 'line',
       data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: this.getFechas(this.datos),
           datasets: [
               {
                   label: "Glucemia",
@@ -92,5 +92,14 @@ export class EstadisticasPage {
       azucarArray.push(dato.azucar);
     });
     return azucarArray;
+  }
+
+  getFechas(datos: Datos[]){
+    let fechasArray: string[] = [];
+    datos.forEach(dato => {
+      console.log(dato.azucar);
+      fechasArray.push(dato.fecha);
+    });
+    return fechasArray;
   }
 }

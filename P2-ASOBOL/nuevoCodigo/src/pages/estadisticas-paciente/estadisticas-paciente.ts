@@ -28,7 +28,7 @@ export class EstadisticasPacientePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private DatosService: DatosService) {
   }
 
-  ionViewDidLoad() {
+  printChart() {
     //this.datos = this.DatosService.getDatos();
     console.log('ionViewDidLoad EstadisticasPage');
     console.log(this.getAzucar(this.datos));
@@ -36,7 +36,7 @@ export class EstadisticasPacientePage {
 
       type: 'line',
       data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: this.getFechas(this.datos),
           datasets: [
               {
                   label: "Glucemia",
@@ -66,7 +66,16 @@ export class EstadisticasPacientePage {
   }
 
   findPaciente(){
-    console.log(this.email);
+    this.DatosService.getDatos().snapshotChanges().subscribe(item =>{
+      this.datos = [];
+      item.forEach(element =>{
+        let x = element.payload.toJSON();
+        x["$key"] = element.key
+        let y = x as Datos
+        if(y.email == this.email) this.datos.push(x as Datos);
+      })
+      this.printChart();
+    });
   }
 
   ajustes(){
@@ -80,5 +89,14 @@ export class EstadisticasPacientePage {
       azucarArray.push(dato.azucar);
     });
     return azucarArray;
+  }
+
+  getFechas(datos: Datos[]){
+    let fechasArray: string[] = [];
+    datos.forEach(dato => {
+      console.log(dato.azucar);
+      fechasArray.push(dato.fecha);
+    });
+    return fechasArray;
   }
 }
