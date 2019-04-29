@@ -17,7 +17,4 @@ export class PacientesService{
     getPacientes(){
         return this.pacientesRef;
     }
-
-    
-
 }
