@@ -11,5 +11,11 @@
 </ion-header>
 
 <ion-content padding>
+  <h1 class="editar"><strong>Puedes editar tus datos de perfil pulsando en el icono de la derecha:</strong></h1>
+  <ion-list>
+    <button ion-item *ngFor="let data of pacientesdelaBase">
+      <p>{{data.nombre}}</p>
+    </button>
+  </ion-list>
 
 </ion-content>

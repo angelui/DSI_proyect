@@ -29,7 +29,6 @@
     "angularfire2": "^5.0.0-rc.6",
     "chart.js": "^2.8.0",
     "firebase": "^5.10.1",
-    "ionic": "^4.10.3",
     "ionic-angular": "3.9.5",
     "ionicons": "3.0.0",
     "redirect-https": "^1.3.0",

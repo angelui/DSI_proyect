@@ -21,7 +21,7 @@
     <ion-toggle [(ngModel)]="doctor" (ionChange)="actualizarDoctor()"></ion-toggle>
   </ion-item>
   
-  <form *ngIf="paciente" (ngSubmit)="onAddPaciente()" class="formulario_registro">
+  <!--<form *ngIf="paciente" (ngSubmit)="onAddPaciente()" class="formulario_registro">
       <ion-label>Rellene el siguiente formulario:</ion-label>
     <ion-item>
       <ion-label class="titulos_campos">Nombre*</ion-label>
@@ -57,10 +57,10 @@
     </ion-item>
     <ion-label class="etiqueta_obligatorio">*Campo obligatorio</ion-label>
     <button class="boton" ion-button block type="submit">Aceptar</button>
-  </form>
+  </form>-->
 
   
-  <form *ngIf="doctor" (ngSubmit)="onAddDoctor()" class="formulario_registro">
+  <!--<form *ngIf="doctor" (ngSubmit)="onAddDoctor()" class="formulario_registro">
     <ion-label>Rellene el siguiente formulario:</ion-label>
     <ion-item>
       <ion-label class="titulos_campos">Nombre*</ion-label>
@@ -100,5 +100,74 @@
     </ion-item>
     <ion-label class="etiqueta_obligatorio">*Campo obligatorio</ion-label>
     <button class="boton" ion-button block type="submit">Aceptar</button>
+  </form>-->
+
+
+  <form *ngIf="paciente" (ngSubmit)="onAddPaciente()" class="formulario_registro" [formGroup]="myForm">
+    <ion-label>Rellene el siguiente formulario:</ion-label>
+    <ion-list>
+    <ion-item>
+      <ion-label class="titulos_campos">Nombre*</ion-label>
+      <ion-input class="entradas" formControlName="nombre" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="pacienteValue.nombre" required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('nombre').hasError('required')">Field is required</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Apellidos*</ion-label>
+      <ion-input class="entradas" formControlName="apellidos" type="text" placeholder="Apellidos" name="apellidos" [(ngModel)]="pacienteValue.apellidos" required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('apellidos').errors && myForm.get('apellidos').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('apellidos').hasError('required')">Field is required</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Correo electrónico*</ion-label>
+      <ion-input class="entradas" formControlName="correoElectronico" type="email" placeholder="Correo electrónico" name="correo_registro" [(ngModel)]="pacienteValue.correoElectronico" required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('correoElectronico').errors && myForm.get('correoElectronico').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('correoElectronico').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('correoElectronico').hasError('email')">It is not an email</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Contraseña*</ion-label>
+      <ion-input class="entradas" formControlName="contrasena" type="password" placeholder="Contraseña" name="contraseña_registro" [(ngModel)]="pacienteValue.contrasena" required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('contrasena').errors && myForm.get('contrasena').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('contrasena').hasError('required')">Field is required</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Teléfono</ion-label>
+      <ion-input class="entradas" formControlName="telefono" type="tel" placeholder="Teléfono" name="telefono" [(ngModel)]="pacienteValue.telefono"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('telefono').errors && myForm.get('telefono').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('telefono').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('telefono').hasError('pattern')">9 valores numericos</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Estautura (cm)</ion-label>
+      <ion-input class="entradas" formControlName="estatura" type="number" placeholder="Estatura" name="estatura" [(ngModel)]="pacienteValue.estatura"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('estatura').errors && myForm.get('estatura').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('estatura').hasError('pattern')">3 valores numéricos</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Peso (kg)</ion-label>
+      <ion-input class="entradas" formControlName="peso" type="number" placeholder="Peso" name="peso" [(ngModel)]="pacienteValue.peso"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('peso').errors && myForm.get('peso').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('peso').hasError('pattern')">3 valores numéricos</p>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulos_campos">Año de nacimiento</ion-label>
+      <ion-input class="entradas" formControlName="anoNacimiento" type="number" placeholder="Año de nacimiento" name="nacimiento" [(ngModel)]="pacienteValue.anoNacimiento"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('anoNacimiento').errors && myForm.get('anoNacimiento').dirty">
+      <p color="danger" ion-text *ngIf="myForm.get('anoNacimiento').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('anoNacimiento').hasError('pattern')">Máximo 4 valores numéricos</p>
+    </ion-item>
+    </ion-list>
+    <ion-label class="etiqueta_obligatorio">*Campo obligatorio</ion-label>
+    <button class="boton" ion-button block type="submit" [disabled]="!myForm.valid">Aceptar</button>
   </form>
 </ion-content>
+
