@@ -24,6 +24,9 @@ export class InicioSesionPage {
 
   public paciente:boolean = true;
   public doctor:boolean = false;
+
+  private okEmail: boolean = false;
+  private okPassword: boolean = false;
   
   str: string;
   pacienteValue = {correo: this.str, contrasena: this.str};
@@ -41,6 +44,8 @@ export class InicioSesionPage {
   }
   
   logIn(){
+    this.okPassword = false;
+    this.okEmail = false;
     if(this.paciente == true){
       this.pacienteService.getPacientes().snapshotChanges().subscribe(item =>{
         item.forEach(element =>{
@@ -52,24 +57,34 @@ export class InicioSesionPage {
           console.log(this.pacienteValue.correo);
           console.log(this.pacienteValue.contrasena);
           if(y.correoElectronico == this.pacienteValue.correo){
+            this.okEmail = true;
             if(y.contrasena == this.pacienteValue.contrasena){
+              this.okPassword = true;
               this.pacienteService.addEmail(y.correoElectronico);
-              this.navCtrl.push(PaginaPacientePage);
-              this.pacienteService.doctor=false;
-            }else{
-              let alert = this.alertController.create({
-                title: 'La contraseña introducida es incorrecta.' ,
-                buttons: ['OK']
-              });
             }
-          }else{
+          }
+        })
+        console.log(this.okEmail);
+        if(this.okEmail){
+          if(this.okPassword){
+            this.navCtrl.push(PaginaPacientePage);
+            this.pacienteService.doctor=false;
+          }
+          else{
             let alert = this.alertController.create({
-              title: 'El correo introducido es incorrecto o no está registrado.' ,
+              title: 'La contraseña introducida es incorrecta.' ,
               buttons: ['OK']
             });
             alert.present();
           }
-        })
+        }
+        else{
+          let alert = this.alertController.create({
+            title: 'El correo introducido es incorrecto o no está registrado.' ,
+            buttons: ['OK']
+          });
+          alert.present();
+        }
       });
     }
     else{
@@ -83,25 +98,33 @@ export class InicioSesionPage {
           console.log(this.pacienteValue.correo);
           console.log(this.pacienteValue.contrasena);
           if(y.correoElectronico == this.pacienteValue.correo){
+            this.okEmail = true;
             if(y.contrasena == this.pacienteValue.contrasena){
+              this.okPassword = true;
               this.doctorService.addEmail(y.correoElectronico);
-              this.pacienteService.doctor=true;
-              this.navCtrl.push(PaginaDoctorPage);
-            }else{
-              let alert = this.alertController.create({
-                title: 'La contraseña introducida es incorrecta.' ,
-                buttons: ['OK']
-              });
-              alert.present();
             }
-          }else{
+          }
+        })
+        if(this.okEmail){
+          if(this.okPassword){
+            this.pacienteService.doctor=true;
+            this.navCtrl.push(PaginaDoctorPage);
+          }
+          else{
             let alert = this.alertController.create({
-              title: 'El correo introducido es incorrecto o no está registrado.' ,
+              title: 'La contraseña introducida es incorrecta.' ,
               buttons: ['OK']
             });
             alert.present();
           }
-        })
+        }
+        else{
+          let alert = this.alertController.create({
+            title: 'El correo introducido es incorrecto o no está registrado.' ,
+            buttons: ['OK']
+          });
+          alert.present();
+        }
       });
     }
   }
