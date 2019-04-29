@@ -9,17 +9,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-title><strong>Estadisticas</strong></ion-title>
-  <form (ngSubmit)="findPaciente()">
-    <ion-item class="item" no-lines>
-        <ion-label>Paciente:</ion-label>
-        <ion-input type="email" placeholder="E-mail del paciente" name="email" [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <div style="text-align: center">
-        <button class = "boton-dato" ion-button type = "submit">Buscar</button>
-    </div>  
-  </form>
-    
+  <ion-title><strong>Estadisticas</strong></ion-title>    
   <ion-item>
     <ion-label>Datos:</ion-label>
     <ion-select placeholder="Glucemia" okText="Aceptar" cancelText="Cancelar">

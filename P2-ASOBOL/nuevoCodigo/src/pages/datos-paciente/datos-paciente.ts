@@ -4,10 +4,9 @@ import { Datos } from '../../models/datos.model';
 import { DatosService } from '../../services/datos-service';
 import { PacientesService } from '../../services/pacientes-service';
 import { DoctoresService } from '../../services/doctores-service';
- 
 
 /**
- * Generated class for the ListadoDatosPage page.
+ * Generated class for the DatosPacientePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -15,18 +14,16 @@ import { DoctoresService } from '../../services/doctores-service';
 
 @IonicPage()
 @Component({
-  selector: 'page-listado-datos',
-  templateUrl: 'listado-datos.html',
+  selector: 'page-datos-paciente',
+  templateUrl: 'datos-paciente.html',
 })
-export class ListadoDatosPage {
+export class DatosPacientePage {
 
   public datos: Datos[] = [];
   email: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertController: AlertController, private DatosService:DatosService, private PacientesPage:PacientesService, private DoctorPage:DoctoresService) {
-    if(this.PacientesPage.doctor == false) this.email = this.PacientesPage.email;
-    else this.email = this.DoctorPage.email;
-    this.getDatos()
+
   }
 
   ionViewWillEnter() {
@@ -50,7 +47,11 @@ export class ListadoDatosPage {
     alert.present();
   }
 
-  getDatos(){
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ListadoDatosPage');
+  }
+
+  findPaciente(){
     this.DatosService.getDatos().snapshotChanges().subscribe(item =>{
       this.datos = [];
       item.forEach(element =>{
@@ -61,12 +62,5 @@ export class ListadoDatosPage {
       })
     });
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListadoDatosPage');
-  }
-
-
-
 
 }

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AjustesPage } from '../ajustes/ajustes';
-import { ListadoDatosPage } from '../listado-datos/listado-datos';
-import { EstadisticasPage } from '../estadisticas/estadisticas';
-import { PaginaInsertarMedPage } from '../pagina-insertar-med/pagina-insertar-med';
+import { DatosPacientePage } from '../datos-paciente/datos-paciente';
+import { EstadisticasPacientePage } from '../estadisticas-paciente/estadisticas-paciente';
 import { ComunidadAsobolPage } from '../comunidad-asobol/comunidad-asobol';
 import { PacientesService } from '../../services/pacientes-service';
 
 /**
- * Generated class for the PaginaPacientePage page.
+ * Generated class for the PaginaDoctorPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -16,17 +15,13 @@ import { PacientesService } from '../../services/pacientes-service';
 
 @IonicPage()
 @Component({
-  selector: 'page-pagina-paciente',
-  templateUrl: 'pagina-paciente.html',
+  selector: 'page-pagina-doctor',
+  templateUrl: 'pagina-doctor.html',
 })
-export class PaginaPacientePage {
+export class PaginaDoctorPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private pacienteService:PacientesService) {
-    if(this.pacienteService.doctor == false){
-      let id = document.getElementsByClassName('boton1');
-
-      console.log(id)
-    }
+  
   }
 
   ionViewDidLoad() {
@@ -38,15 +33,11 @@ export class PaginaPacientePage {
   }
 
   listado(){
-    this.navCtrl.push(ListadoDatosPage);
+    this.navCtrl.push(DatosPacientePage);
   }
 
   estadisticas(){
-    this.navCtrl.push(EstadisticasPage);
-  }
-
-  insertarMed(){
-    this.navCtrl.push(PaginaInsertarMedPage);
+    this.navCtrl.push(EstadisticasPacientePage);
   }
 
   comunidadASOBOL(){

@@ -5,6 +5,8 @@ import { Pacientes } from '../models/pacientes.model';
 @Injectable()
 export class PacientesService{
     
+    public email:string;
+    public doctor:boolean;
     private pacientesRef=this.db.list<Pacientes>('AsobolFirebase/pacientes');
 
     constructor(private db:AngularFireDatabase){
@@ -18,6 +20,8 @@ export class PacientesService{
         return this.pacientesRef;
     }
 
-    
+    addEmail(str:string){
+        this.email = str;
+    }
 
 }
