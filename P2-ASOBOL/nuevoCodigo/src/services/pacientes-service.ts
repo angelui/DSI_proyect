@@ -5,8 +5,10 @@ import { Pacientes } from '../models/pacientes.model';
 @Injectable()
 export class PacientesService{
     
-    private pacientesRef=this.db.list<Pacientes>('AsobolFirebase');
+    private pacientesRef=this.db.list<Pacientes>('AsobolFirebase/pacientes');
 
+    // Get a reference to the database service
+    
     constructor(private db:AngularFireDatabase){
     }
 
@@ -17,5 +19,7 @@ export class PacientesService{
     getPacientes(){
         return this.pacientesRef;
     }
+
+    
 
 }
