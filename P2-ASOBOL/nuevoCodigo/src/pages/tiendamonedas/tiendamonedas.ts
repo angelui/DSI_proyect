@@ -24,7 +24,7 @@ export class TiendamonedasPage {
   comprar(){
     let alert = this.alertController.create({
       title: 'Comprar tema' ,
-      message:'Muy pronto podrás personalizar tu aplicación cambiando el tema por defecto!',
+      message:'¡Muy pronto podrás personalizar tu aplicación cambiando el tema por defecto!',
       buttons: ['Cancelar']
     });
     alert.present();

@@ -140,11 +140,11 @@
       <ion-input class="entradas" formControlName="peso" type="number" placeholder="Peso" name="peso" [(ngModel)]="pacienteValue.peso"></ion-input>
     </ion-item>
     <ion-item *ngIf="formularioPaciente.get('peso').errors && formularioPaciente.get('peso').dirty">
-      <p color="danger" ion-text *ngIf="formularioPaciente.get('peso').hasError('pattern')">Campo numérico de 9 dígitos.</p>
+      <p color="danger" ion-text *ngIf="formularioPaciente.get('peso').hasError('pattern')">Campo numérico de 3 dígitos.</p>
     </ion-item>
     <ion-item>
       <ion-label class="titulos_campos">Año de nacimiento</ion-label>
-      <ion-input class="entradas" formControlName="anoNacimiento" type="number" placeholder="Año de nacimiento" name="nacimiento" [(ngModel)]="pacienteValue.anoNacimiento" onchange="comprobarAno()"></ion-input>
+      <ion-input class="entradas" formControlName="anoNacimiento" type="number" placeholder="Año de nacimiento" name="nacimiento" [(ngModel)]="pacienteValue.anoNacimiento"></ion-input>
     </ion-item>
     <ion-item *ngIf="formularioPaciente.get('anoNacimiento').errors && formularioPaciente.get('anoNacimiento').dirty">
       <p color="danger" ion-text *ngIf="formularioPaciente.get('anoNacimiento').hasError('required')">Campo obligatorio.</p>
@@ -152,6 +152,6 @@
     </ion-item>
     </ion-list>
     <ion-label class="etiqueta_obligatorio">*Campo obligatorio</ion-label>
-    <button class="boton" ion-button block type="submit" [disabled]="!formularioPaciente.valid">Aceptar</button>
+    <button class="boton" ion-button block type="submit" [disabled]="(!formularioPaciente.valid && !formularioDoctor.valid)">Aceptar</button>
   </form>
 </ion-content>

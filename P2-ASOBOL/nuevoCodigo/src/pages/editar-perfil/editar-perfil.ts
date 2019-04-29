@@ -41,7 +41,7 @@ export class EditarPerfilPage {
   }
   
   LlamarPopUp() {
-    let paciente = this.pacientesdelaBase[0];
+    /*let paciente = this.pacientesdelaBase[0];
     let alert = this.alertController.create({
       title: 'Registro' ,
       subTitle: paciente.nombre + ' ' + paciente.apellidos,
@@ -52,6 +52,11 @@ export class EditarPerfilPage {
               'Peso: ' + paciente.peso + '<p>' + '<p>'+
               'Año de nacimiento: ' + paciente.anoNacimiento + '<p>' + '<p>',
       buttons: ['OK']
+    });*/
+    let alert = this.alertController.create({
+      title: 'Editar perfil' ,
+      message:'¡Muy pronto podrás cambiar tus datos en la aplicación!',
+      buttons: ['Cancelar']
     });
     alert.present();
 
