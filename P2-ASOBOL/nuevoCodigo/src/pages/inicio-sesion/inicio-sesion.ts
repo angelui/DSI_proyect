@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , AlertController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PaginaPacientePage } from '../pagina-paciente/pagina-paciente';
 import { Pacientes } from '../../models/pacientes.model';
 import { PacientesService } from '../../services/pacientes-service';
@@ -19,7 +19,6 @@ import { PaginaDoctorPage } from '../pagina-doctor/pagina-doctor';
   selector: 'page-inicio-sesion',
   templateUrl: 'inicio-sesion.html',
 })
-
 export class InicioSesionPage {
 
 
@@ -40,7 +39,6 @@ export class InicioSesionPage {
   iniciarSesion(){
     this.navCtrl.push(PaginaPacientePage);
   }
-
   
   logIn(){
     if(this.paciente == true){
@@ -131,7 +129,5 @@ export class InicioSesionPage {
       this.paciente=false;
     }
   }
-
-  
 
 }

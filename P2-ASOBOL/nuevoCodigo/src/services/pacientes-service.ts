@@ -24,6 +24,4 @@ export class PacientesService{
         this.email = str;
     }
 
-    
-
 }
