@@ -13,9 +13,17 @@
 <ion-content padding>
   <h1 class="editar"><strong>Puedes editar tus datos de perfil pulsando en el icono de la derecha:</strong></h1>
   <ion-list>
-    <button ion-item *ngFor="let data of pacientesdelaBase">
-      <p>{{data.nombre}}</p>
-    </button>
+    <ion-item *ngFor="let data of pacientesdelaBase">
+      <p><strong>Nombre: </strong>{{data.nombre}}</p>
+      <p><strong>Apellidos: </strong>{{data.apellidos}}</p>
+      <p><strong>Correo electrónico: </strong>{{data.correoElectronico}}</p>
+      <p><strong>Contraseña: </strong>{{data.contrasena}}</p>
+      <p><strong>Teléfono: </strong>{{data.telefono}}</p>
+      <p><strong>Estatura: </strong>{{data.estatura}}</p>
+      <p><strong>Peso: </strong>{{data.peso}}</p>
+      <p><strong>Año de nacimiento: </strong>{{data.anoNacimiento}}</p>
+    </ion-item>
+    <img class="lapiz" src="../../assets/imgs/lapiz.png" (click)="LlamarPopUp()"><img/>
   </ion-list>
 
 </ion-content>
