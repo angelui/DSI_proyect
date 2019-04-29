@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InicioSesionPage } from '../inicio-sesion/inicio-sesion';
 import { Pacientes } from '../../models/pacientes.model';
 import { PacientesService } from '../../services/pacientes-service';
+import { Doctores } from '../../models/doctores.model';
+import { DoctoresService } from '../../services/doctores-service';
 import { Observable } from 'rxjs/Observable';
 
 
@@ -27,9 +29,11 @@ export class RegistroPage {
   str: string;
   num: number;
 
-  pacienteValue = { nombre: this.str, apellidos: this.str, correoElectronico: this.str, contrasena: this.str, telefono: this.num, estatura: this.num, peso: this.num, anoNacimiento: this.num};
+  pacienteValue = {nombre: this.str, apellidos: this.str, correoElectronico: this.str, contrasena: this.str, telefono: this.num, estatura: this.num, peso: this.num, anoNacimiento: this.num};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private pacienteService: PacientesService) {
+  doctorValue = {nombre: this.str, apellidos: this.str, correoElectronico: this.str, contrasena: this.str, telefono: this.num, anosExperiencia: this.num, numeroColegiado: this.num, centro: this.str, especialidad: this.str};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pacienteService: PacientesService, private doctorService: DoctoresService) {
   }
 
   ionViewDidLoad() {
@@ -65,8 +69,9 @@ export class RegistroPage {
     this.navCtrl.pop();
   }
 
-  InicioSesion(){
-  	this.navCtrl.push(InicioSesionPage);
+  onAddDoctor(){
+    this.doctorService.addDoctor(this.doctorValue);
+    this.navCtrl.pop();
   }
 
 }
