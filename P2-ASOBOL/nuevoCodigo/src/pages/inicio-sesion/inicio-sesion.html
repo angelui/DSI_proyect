@@ -11,6 +11,15 @@
 </ion-header>
 
 <ion-content padding>
+   <ion-label>Seleccione el tipo de usuario:</ion-label>
+  <ion-item>
+    <ion-label class="nombre_toggle">Paciente</ion-label>
+    <ion-toggle [(ngModel)]="paciente" (ionChange)="actualizarPaciente()"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label class="nombre_toggle">Doctor</ion-label>
+    <ion-toggle [(ngModel)]="doctor" (ionChange)="actualizarDoctor()"></ion-toggle>
+  </ion-item>
   <form class="formulario">
     <ion-item>
       <ion-label class="titulos_campos">Correo</ion-label>

@@ -6,7 +6,7 @@ import { Datos } from '../../models/datos.model';
 import { DatosService } from '../../services/datos-service';
 
 /**
- * Generated class for the EstadisticasPage page.
+ * Generated class for the EstadisticasPacientePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -14,11 +14,11 @@ import { DatosService } from '../../services/datos-service';
 
 @IonicPage()
 @Component({
-  selector: 'page-estadisticas',
-  templateUrl: 'estadisticas.html',
+  selector: 'page-estadisticas-paciente',
+  templateUrl: 'estadisticas-paciente.html',
 })
-export class EstadisticasPage {
-
+export class EstadisticasPacientePage {
+  
   @ViewChild('lineCanvas') lineCanvas;
 
   lineChart: any;
@@ -26,7 +26,6 @@ export class EstadisticasPage {
   datos: Datos[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private DatosService: DatosService) {
-
   }
 
   ionViewDidLoad() {
@@ -64,6 +63,10 @@ export class EstadisticasPage {
           ]
       }
     });
+  }
+
+  findPaciente(){
+    console.log(this.email);
   }
 
   ajustes(){

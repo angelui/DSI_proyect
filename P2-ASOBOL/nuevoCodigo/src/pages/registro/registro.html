@@ -1,26 +1,25 @@
 <!--
   Generated template for the RegistroPage page.
-
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Registro</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-label>Seleccione el tipo de usuario:</ion-label>
-  <ion-item>
-    <ion-label class="nombre_toggle">Paciente</ion-label>
-    <ion-toggle [(ngModel)]="paciente" (ionChange)="actualizarPaciente()"></ion-toggle>
-  </ion-item>
-  <ion-item>
-    <ion-label class="nombre_toggle">Doctor</ion-label>
-    <ion-toggle [(ngModel)]="doctor" (ionChange)="actualizarDoctor()"></ion-toggle>
-  </ion-item>
+    <ion-navbar>
+      <ion-title>Registro</ion-title>
+    </ion-navbar>
+  </ion-header>
   
+  <ion-content padding>
+    <ion-label>Seleccione el tipo de usuario:</ion-label>
+    <ion-item>
+      <ion-label class="nombre_toggle">Paciente</ion-label>
+      <ion-toggle [(ngModel)]="paciente" (ionChange)="actualizarPaciente()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label class="nombre_toggle">Doctor</ion-label>
+      <ion-toggle [(ngModel)]="doctor" (ionChange)="actualizarDoctor()"></ion-toggle>
+    </ion-item>
+    
   <form *ngIf="doctor" (ngSubmit)="onAddDoctor()" class="formulario_registro" [formGroup]="formularioDoctor">
     <ion-label>Rellene el siguiente formulario:</ion-label>
     <ion-item>
@@ -156,4 +155,3 @@
     <button class="boton" ion-button block type="submit" [disabled]="!formularioPaciente.valid">Aceptar</button>
   </form>
 </ion-content>
-

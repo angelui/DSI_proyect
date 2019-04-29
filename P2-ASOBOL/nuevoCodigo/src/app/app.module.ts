@@ -29,6 +29,9 @@ import { DatosService } from '../services/datos-service';
 import { PacientesService } from '../services/pacientes-service';
 import { DoctoresService } from '../services/doctores-service';
 import { PaginaInsertarMedPage } from '../pages/pagina-insertar-med/pagina-insertar-med';
+import { PaginaDoctorPage } from '../pages/pagina-doctor/pagina-doctor';
+import { DatosPacientePage } from '../pages/datos-paciente/datos-paciente';
+import { EstadisticasPacientePage } from '../pages/estadisticas-paciente/estadisticas-paciente';
 
 /*Base de datos*/
 import { Services } from '@angular/core/src/view';
@@ -59,7 +62,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     TipoUnidadPage,
     PaginaPacientePage,
     ListadoDatosPage,
-    PaginaInsertarMedPage
+    PaginaInsertarMedPage,
+    EstadisticasPacientePage,
+    PaginaDoctorPage,
+    DatosPacientePage
   ],
   imports: [
     BrowserModule,
@@ -90,7 +96,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     TiendamonedasPage,
     PaginaPacientePage,
     ListadoDatosPage,
-    PaginaInsertarMedPage
+    PaginaInsertarMedPage,
+    EstadisticasPacientePage,
+    PaginaDoctorPage,
+    DatosPacientePage
   ],
   providers: [
     StatusBar,
