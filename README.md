@@ -1,8 +1,6 @@
 # DSI_proyect
-## Victor Branch
+Para que funcione el código de la práctica (P2):
 
-Commit 11:12
-Creación de la pagina principal de los pacientes.
-Commit 14:12
-Se ha creado la pagina donde los usuarios podran observar los datos introducidos.
+- Instalar la versión de angularfire2@5.0.0-rc.6 
+- Agregar la siguiente línea de código (automaticDataCollectionEnabled:boolean) en el archivo: \node_modules\angularfire2\firebase.app.module.d.ts
 
